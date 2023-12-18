@@ -19,6 +19,22 @@ library(DiagrammeR)
 
 
 createHDMDiagram <- function(objective, criteria, alternatives) {
+
+  # Check if objective contains exactly one value
+  if (length(objective) != 1) {
+    stop("Objective should contain exactly one value.")
+  }
+
+  # Check if criteria has at least one value
+  if (length(criteria) < 1) {
+    stop("Criteria should have at least one value.")
+  }
+
+  # Check if alternatives has at least one value
+  if (length(alternatives) < 1) {
+    stop("Alternatives should have at least one value.")
+  }
+
   mermaidCode <- paste("
     graph TB
         ", paste0(sapply(seq_along(criteria), function(i) paste0("O[", objective, "] --> C", i, "[", criteria[i], "]")), collapse = "\n        "), "
