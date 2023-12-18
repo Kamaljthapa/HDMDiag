@@ -1,0 +1,13 @@
+Package: HDMDiag
+Type: Package
+Title: HDM Diagram Package
+Version: 0.1.0
+Author: Kamal Thapa
+Maintainer: Kamal Thapa <thapajkamal@gmail.com>
+Description: Contains function for creating HDM diagrams (Objective, Criteria, and Alternatives).
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    DiagrammeR
+RoxygenNote: 7.2.3
