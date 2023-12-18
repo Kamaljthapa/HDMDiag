@@ -10,9 +10,6 @@
 
 \item{alternatives}{A character vector specifying the alternative options.}
 }
-\value{
-A character string containing the Mermaid code for the diagram.
-}
 \description{
 This function generates a Mermaid diagram representing the HDM structure
 with the given objective, criteria, and alternatives.
@@ -21,7 +18,6 @@ with the given objective, criteria, and alternatives.
 objective <- "Selecting the best site for a new sales office and showroom"
 criteria <- c("Cost", "Distance from Downtown", "Floor Area", "Image of Location")
 alternatives <- c("Galleria Building", "Pearl District", "Hillsboro", "Lakes Oswego")
-mermaidCode <- createHDMDiagram(objective, criteria, alternatives)
-DiagrammeR::mermaid(mermaidCode)
+createHDMDiagram(objective, criteria, alternatives)
 
 }

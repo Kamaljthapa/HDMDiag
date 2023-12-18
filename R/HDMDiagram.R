@@ -7,13 +7,11 @@
 #' @param objective The main objective of the decision problem.
 #' @param criteria A character vector specifying the criteria for evaluation.
 #' @param alternatives A character vector specifying the alternative options.
-#' @return A character string containing the Mermaid code for the diagram.
 #' @examples
 #' objective <- "Selecting the best site for a new sales office and showroom"
 #' criteria <- c("Cost", "Distance from Downtown", "Floor Area", "Image of Location")
 #' alternatives <- c("Galleria Building", "Pearl District", "Hillsboro", "Lakes Oswego")
-#' mermaidCode <- createHDMDiagram(objective, criteria, alternatives)
-#' DiagrammeR::mermaid(mermaidCode)
+#' createHDMDiagram(objective, criteria, alternatives)
 #'
 #' @import DiagrammeR
 #' @export
@@ -44,16 +42,16 @@ createHDMDiagram <- function(objective, criteria, alternatives) {
 
     ", sep = "")
 
-  return(mermaidCode)
+  # Plot the Mermaid diagram
+  DiagrammeR::mermaid(mermaidCode)
 }
 
+# Example Usage
 objective <- "Selecting the best site for a new sales office and showroom"
 criteria <- c("Cost", "Distance from Downtown", "Floor Area", "Image of Location")
 alternatives <- c("Galleria Building", "Pearl District", "Hillsboro", "Lakes Oswego")
 
-mermaidCode <- createHDMDiagram(objective, criteria, alternatives)
+createHDMDiagram(objective, criteria, alternatives)
 
-# Correct usage of DiagrammeR::mermaid
-DiagrammeR::mermaid(mermaidCode)
 
 
